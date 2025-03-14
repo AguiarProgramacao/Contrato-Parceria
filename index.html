@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gerador de Contrato Imigrei" />
+  <meta property="og:description" content="Facilitando e automatizando os seus serviços." />
+  <meta property="og:site_name" content="Imigrei Assessoria de Imigração" />
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  <title>Contrato de Parceria</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-um">
+      <div class="buttons-links">
+        <select id="contratoSelect" class="btn btn-contrato">
+          <option value="https://gerador-de-contrato-imigrei.vercel.app/">Cid. Italiana</option>
+          <option value="https://contrato-portugal.vercel.app/">Cid. Portuguesa</option>
+          <option value="https://contrato-espanha.vercel.app/">Cid. Espanhola</option>
+          <option value="https://proposta-genealogia-imigrei.vercel.app/">Busca Genealógica</option>
+          <option value="https://contrato-espanha.vercel.app/">Contr. Parceiria</option>
+        </select>
+        <a href="https://formulario-procuracao-imigrei.vercel.app/" class="btn btn-proposta">Procuração</a>
+      </div>
+      <div>
+        <h1>Contrato de Parceria</h1>
+        <p>Preencha todos os dados do requerente 1 junto com a forma de pagamento e <b>não esqueça de colocar a data de
+            pagamento</b>. <br /> <br /> Ao selecionar na forma de pagamento "Pagamentos Diferentes", selecione a forma
+          de pagamento
+          do requerente atual junto com a quantidade de parcelas.</p>
+      </div>
+    </div>
+    <div class="container-dois">
+      <form id="requerentes-form">
+        <div class="requerente">
+          <fieldset>
+            <legend>Dados do Requerente</legend>
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome do Parceiro" required>
+            <label>Número da OAB:</label>
+            <input type="text" name="oab" id="oab" placeholder="Número do OAB do Parceiro" required>
+            <label>RG:</label>
+            <input type="text" name="rg" placeholder="Rg do parceiro" required>
+            <label>CPF:</label>
+            <input type="text" name="cpf" placeholder="CPF do Parceiro" required>
+            <label>CEP:</label>
+            <input class="input" type="text" id="cep" placeholder="Digite o CEP" name="cep">
+            <div class="endereco-um">
+              <div class="div">
+                <label>Endereço:</label>
+                <input class="input" type="text" id="endereco" name="endereco" required>
+              </div>
+              <div class="div">
+                <label>Bairro:</label>
+                <input class="input" type="text" id="bairro" name="bairro" required>
+              </div>
+              <div class="div">
+                <label>Cidade:</label>
+                <input class="input" type="text" id="cidade" name="cidade" required>
+              </div>
+            </div>
+            <div class="endereco-dois">
+              <div class="div">
+                <label>Número:</label>
+                <input type="text" id="numero">
+              </div>
+              <div class="div">
+                <label>Complemento:</label>
+                <input class="input" type="text" id="complemento" name="complemento" />
+              </div>
+              <div class="div">
+                <label>Estado:</label>
+                <input class="input" type="text" id="estado" name="estado">
+              </div>
+            </div>
+            <label>Tipo de parceria:</label>
+            <select name="cidadania" id="cidadania">
+              <option value="">Selecione o serviço</option>
+              <option value="Cidadania Italiana">Cidadania Italiana</option>
+              <option value="Cidadania Espanhola">Cidadania Espanhola</option>
+              <option value="Cidadania Portuguesa">Cidadania Portuguesa</option>
+            </select>
+          </fieldset>
+        </div>
+      </form>
+      <div class="functions-btn">
+        <button id="adicionar-requerente" class="btn btn-requerente">Adicionar Requerente</button>
+        <button id="gerar-pdf" class="btn btn-pdf">Gerar PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
