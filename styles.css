@@ -143,11 +143,30 @@ select{
     flex-direction: column;
   }
 
+  .container-um {
+    width: 100%;
+  }
+
+  .container-dois {
+    width: 100%;
+  }
+
   .buttons-links{
     gap: 5px;
     width: 95%;
     border-radius: 8px;
     padding: 8px;
+  }
+
+  .btn-contrato {
+    width: 50%;
+  }
+
+  .buttons-links a{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .btn{
@@ -171,7 +190,6 @@ select{
   }
   
   select{
-    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -191,5 +209,9 @@ select{
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+  }
+
+  .functions-btn .btn{
+    padding-inline: 15px;
   }
 }
